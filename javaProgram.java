@@ -13,6 +13,12 @@ public class javaProgram {
         System.out.println("Enter last name: ");
         String lastName = scanner.nextLine();
 
-        System.out.println("Your name is: " + firstName + " " + lastName);
+        var firstLetter = firstName.charAt(0);
+        var capFirstLetter = Character.toUpperCase(firstLetter);
+
+        var lastLetter = lastName.charAt(0);
+        var capLastLetter = Character.toUpperCase(lastLetter);
+
+        System.out.println("Your name is: " + firstName.replace(firstLetter, capFirstLetter) + " " + lastName.replace(lastLetter, capLastLetter));
     }
 }
